@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 97%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* box model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    /* Colors */
+    background: var(--pale-blue) url("/images/pattern-background-desktop.svg") no-repeat;
+    background-size: contain;    
+    
+    /* Typography */
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+/*
+    Main Card
+*/
+
+
+#main-card {
+    min-width: 17%;
+    width: 21rem;
+    min-height: auto;
+    margin: 0 1.2rem;
+    background-color: azure;
+    border-radius: 1.5rem;
+}
+
+/* ||||||||||||||||||||||||||||||||| */
+
+
+/*
+    Card Image
+*/
+
+#main-card #card-image > img {
+    max-width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* ||||||||||||||||||||||||||||||||| */
+
+
+/*
+    Description order
+*/
+
+#description-order {
+    text-align: center;
+    padding: 1.5rem 2rem;
+}
+
+/* heading */
+#description-order h1 {
+    font-weight: 900;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+}
+
+/* paragraph */
+#description-order p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.7;
+    color: var(--desaturated-blue);
+}
+
+/* ||||||||||||||||||||||||||||||||| */
+
+
+/* 
+    Current Plan 
+*/
+
+#current-plan {
+    margin: 0 1.5rem;
+    padding: 1rem;
+    background-color: var(--very-pale-blue);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* plan info */
+#current-plan #plan-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* plan name */
+#current-plan #plan-info #p-name {
+    font-weight: 900;
+    font-size: 90%;
+}
+
+/* plan price */
+#current-plan #plan-info #p-price {
+    color: var(--desaturated-blue);
+    margin-top: .2rem;
+    font-size: 90%;
+}
+
+/* change plan button */
+#current-plan a {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 80%;
+    color: var(--bright-blue)
+}
+/* ::hover  */
+#current-plan a:hover {
+    opacity: .6;
+}
+
+/* ||||||||||||||||||||||||||||||||| */
+
+
+/*
+    Order buttons
+*/
+
+#order-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    margin: 1.5rem;
+}
+
+/* Global style */
+#order-buttons button {
+    flex: 1;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer
+}
+
+/* Proceed button */
+#order-buttons button:first-of-type {
+    background-color: var(--bright-blue);
+    padding: 1rem;
+    border-radius: 9px;
+    color: var(--very-pale-blue);
+    box-shadow: 0 10px 10px var(--pale-blue);
+}
+
+/* ::hover */
+#order-buttons button:first-of-type:hover {
+    opacity: .6;
+}
+
+/* Cancel button */
+#order-buttons button:last-of-type {
+    background-color: transparent;   
+    color: var(--desaturated-blue);
+}
+
+/* ::hover */
+#order-buttons button:last-of-type:hover {
+    color: var(--dark-blue);
+}
